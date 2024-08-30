@@ -1,7 +1,7 @@
 import pandas as pd
 
-users_data = pd.read_csv("School project work\\users_data.csv", sep=",", header=0)
-users_data.to_csv("School project work\\users_data.csv", index=False)
+users_data = pd.read_csv("users_data.csv", sep=",", header=0)
+users_data.to_csv("users_data.csv", index=False)
 df=None
 email=None
 password=None
@@ -13,18 +13,9 @@ while True:
         1. Book rooms
         2. View existing bookings
         3. Cancel bookings""")
-    main=input("How would you like to proceed?: ")
     date_ar = input("Please enter the date of arrival (DD/MM/YYYY): ")
     date_dep = input("Please enter the date of departure (DD/MM/YYY):  ")
-    if main=="1":
-        print("Where would you like to stay for your holidays?")
-        location=input("Where would you like to spend your vacation?: ")
-        if location=="Dubai" or location=="USA" or location=="India":
-            print("Hotels available in", location)
-        else:
-            print("No hotels available in", location, "Please try again.")
-            continue
-        print("Now on to bookings!")
+    print("Now on to bookings!")
 
         while True:
             print("Booking a room!")
