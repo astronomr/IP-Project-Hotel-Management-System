@@ -1,10 +1,7 @@
 import pandas as pd
-import numpy as np
 
 users_data = pd.read_csv("School project work\\users_data.csv", sep=",", header=0)
 users_data.to_csv("School project work\\users_data.csv", index=False)
-bookings_df = pd.read_csv("School project work\\bookings.csv", sep=",", header=0)
-bookings_df.to_csv("School project work\\bookings.csv")
 df=None
 email=None
 password=None
@@ -98,7 +95,7 @@ while True:
                 roomFacCH="Breakfast"
             elif roomFac==2:
                 print("Buffet selected.")
-                roomFacCh="Buffet"
+                roomFacCH="Buffet"
             elif roomFac==3:
                 print("Gym membership selected.")
                 roomFacCH="Gym Membership"
@@ -136,7 +133,7 @@ while True:
                     1. Register
                     2. Login
                     3. Exit""")
-                
+               
                 choice = input("Choose a number: ")
 
                 if choice=="1":
@@ -192,7 +189,7 @@ while True:
                             print("Please enter a valid input. (Y/N)")
                     else:
                         password = input("Enter password: ")
-                        
+                       
                         print("Registered successfully!")
 
                         users_data.loc[users_data.shape[0]] = [email,password]
@@ -202,7 +199,7 @@ while True:
                     email = input("Enter email: ")
 
                     existing_user = users_data.loc[(users_data["email"] == email)]
-                    
+                   
                     if existing_user.empty:
                         print("No account found. You can register instead.")
                         continue
@@ -220,13 +217,17 @@ while True:
                     else:
                         print("Incorrect email or password")
                     continue
-                    
+                   
                 elif choice=="3":
                     print("Exiting...")
                     break
+                   
 
                 else:
                     print("Please enter a valid number.")
+            break
+        break
+   
 
     elif main=="2":
         print("You may have to log in first!")
@@ -234,7 +235,7 @@ while True:
             email = input("Enter email: ")
 
             existing_user = users_data.loc[(users_data["email"] == email)]
-            
+           
             if existing_user.empty:
                 print("No account found. You can register instead.")
                 continue
