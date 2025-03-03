@@ -1,9 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-users_data = pd.read_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\users_data.csv", sep=",", header=0)
-users_data.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\users_data.csv", index=False)
-bookings_df = pd.read_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\bookings.csv", sep=",", header=0)
+users_data = pd.read_csv("C:\\Users\\Python\\users_data.csv", sep=",", header=0)
+users_data.to_csv("C:\\Users\\Python\\users_data.csv", index=False)
+bookings_df = pd.read_csv("C:\\Users\\Python\\bookings.csv", sep=",", header=0)
 df=None
 email=None
 password=None
@@ -170,7 +170,7 @@ while True:
             user_bookings=pd.DataFrame(d)
 
             bookings_df.loc[bookings_df.shape[0]] = [email,hotel_ch,location,roomTypeCh,roomLocCh,num_people,roomFacCh,price_selec]
-            bookings_df.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\bookings.csv", sep=",", index=False)
+            bookings_df.to_csv("C:\\Users\\Python\\bookings.csv", sep=",", index=False)
 
             print("Confirming your bookings!")
 
@@ -199,7 +199,7 @@ while True:
                                 log_email = input("Enter email: ")
                                 password = input("Enter Password: ")
 
-                                users_data = pd.read_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\users_data.csv")
+                                users_data = pd.read_csv("C:\\Users\\Python\\users_data.csv")
 
                                 match = users_data.loc[(users_data["email"] == reg_email) & (users_data["password"] == password)]
 
@@ -209,7 +209,7 @@ while True:
 
                                     bookings_df=bookings_df.where(pd.notna(bookings_df), log_email)
 
-                                    bookings_df.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\bookings.csv", sep=",", index=False)
+                                    bookings_df.to_csv("C:\\Users\\Python\\bookings.csv", sep=",", index=False)
 
                                     print(bookings_df[bookings_df["Email"] == log_email].tail(1))
 
@@ -233,7 +233,7 @@ while True:
                                     print("Registered successfully!")
 
                                     users_data.loc[users_data.shape[0]] = [reg_email,password]
-                                    users_data.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\users_data.csv",sep=",",index=False)
+                                    users_data.to_csv("C:\\Users\\Python\\users_data.csv",sep=",",index=False)
 
                                 else:
                                     print("Please try again.")
@@ -247,7 +247,7 @@ while True:
                             print("Registered successfully!")
 
                             users_data.loc[users_data.shape[0]] = [reg_email,password]
-                            users_data.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\users_data.csv",sep=",",index=False)
+                            users_data.to_csv("C:\\Users\\Python\\users_data.csv",sep=",",index=False)
 
                         print("You may have to Log in now...")
 
@@ -269,7 +269,7 @@ while True:
 
                             bookings_df=bookings_df.where(pd.notna(bookings_df), log_email)
 
-                            bookings_df.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\bookings.csv", sep=",", index=False)
+                            bookings_df.to_csv("C:\\Users\\Python\\bookings.csv", sep=",", index=False)
 
                             print(bookings_df[bookings_df["Email"] == log_email])
                             exit()
@@ -297,7 +297,7 @@ while True:
 
                             bookings_df=bookings_df.where(pd.notna(bookings_df), log_email)
 
-                            bookings_df.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\bookings.csv", sep=",", index=False)
+                            bookings_df.to_csv("C:\\Users\\Python\\bookings.csv", sep=",", index=False)
 
                             print(bookings_df[bookings_df["Email"] == log_email].tail(1))
 
@@ -351,7 +351,7 @@ while True:
 
                 bookings_df=bookings_df.where(pd.notna(bookings_df), log_email)
 
-                bookings_df.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\bookings.csv", sep=",", index=False)
+                bookings_df.to_csv("C:\\Users\\Python\\bookings.csv", sep=",", index=False)
 
                 print(bookings_df[bookings_df["Email"] == log_email])
 
@@ -397,7 +397,7 @@ while True:
 
                 bookings_df = bookings_df.drop(drop_bookings_df.index)
 
-                bookings_df.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\bookings.csv", sep=",", index=False)
+                bookings_df.to_csv("C:\\Users\\Python\\bookings.csv", sep=",", index=False)
 
                 print("Booking cancelled. Restarting the prompt...")
                 print("-----------------------")
@@ -496,7 +496,7 @@ while True:
                         print("Ok")
 
                         bookings_df = bookings_df[ bookings_df['Email'] != admin_drop_booking ]
-                        bookings_df.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\bookings.csv", sep=",", index=False)
+                        bookings_df.to_csv("C:\\Users\\Python\\bookings.csv", sep=",", index=False)
 
                         print("User Bookings Updated.")
 
@@ -525,7 +525,7 @@ while True:
                     new_user = input("Please enter email: ")
                     new_password = input("Please enter password: ")
                     users_data.loc[users_data.shape[0]] = [new_user,new_password]
-                    users_data.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\users_data.csv",sep=",",index=False)
+                    users_data.to_csv("C:\\Users\\Python\\users_data.csv",sep=",",index=False)
 
                     print("User successfully added! Please restart the prompt to Refresh the page.")
                     exit()
@@ -537,7 +537,7 @@ while True:
                         print("Ok")
 
                         users_data = users_data[users_data['email'] != admin_drop_user]
-                        users_data.to_csv("C:\\Users\\Gopvasud\\Desktop\\Aarav\\Python\\users_data.csv", sep=",", index=False)
+                        users_data.to_csv("C:\\Users\\Python\\users_data.csv", sep=",", index=False)
 
                         print("Users Updated.")
                         print("User successfully added! Please restart the prompt to Refresh the page.")
