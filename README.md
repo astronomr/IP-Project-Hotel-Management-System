@@ -12,7 +12,7 @@ The following menu options are available to the User:
 3.Viewing the rooms they have booked.
 4.Cancelling the rooms they have booked.
 
-If User is an Admin,
+If User is an Admin:
 1.They can view all rooms booked by different people.
 2.Viewing which Hotel / Room Type / Facilities is most popular using Graphs.
 3.Managing User bookings and User data.
