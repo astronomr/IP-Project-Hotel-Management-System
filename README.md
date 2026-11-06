@@ -1,5 +1,6 @@
 The “Hotel Management System” is a management software for allowing users to book Hotel rooms and maintain their records.
 The DMS is a menu-based application developed in Python (Spyder) with the backend of a comma-separated value (CSV) flat file.
+Libraries used - Pandas, matplotLib
 
 This project has been made without the use of functions and a lot of if-else statements as per the requirements of my subject - Informatics Practices.
 
