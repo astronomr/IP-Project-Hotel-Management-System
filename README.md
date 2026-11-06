@@ -3,7 +3,7 @@ The DMS is a menu-based application developed in Python (Spyder) with the backen
 
 This project has been made without the use of functions and a lot of if-else statements as per the requirements of my subject - Informatics Practices.
 
-For more information, check the pdf attached to the repository.
+For more information, check 'IP Project File.pdf' attached to the repository.
 
 The following menu options are available to the User:
 1. Book their Hotel room.
